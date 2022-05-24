@@ -1,0 +1,42 @@
+{
+  "name": "axios-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Bryan-Herrera-Dev",
+  "scripts": {
+    "build:sass": "sass --no-source-map src/:dist/",
+    "copy:css": "copyfiles -u 1 ./src/* dist",
+    "copy:html": "copyfiles -u 1 ./src/**/*.html dist",
+    "copy:js": "copyfiles -u 1 ./src/**/*.js dist",
+    "copy:img": "copyfiles -u 1 ./src/**/*.png  dist",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:html": "onchange \"src/**/*.html\" -- npm run copy:html",
+    "watch:sass": "sass --watch src/:dist/",
+    "watch:js": "onchange \"src/**/*.js\" -- npm run copy:js",
+    "watch:img": "onchange \"./src/**/*.png\" -- npm run copy:img",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server dist --files dist",
+    "start": "npm-run-all build --parallel watch serve",
+    "potsbuild": "postcss \"./dist/**/*.css\" --use autoprefixer cssnano --base dist --dir dist",
+    "build": "npm-run-all copy copy:html build:* copy:css copy:js copy:img potsbuild"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "browser-sync": "^2.26.14",
+    "browserslist": "^4.20.3",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.0.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.32.13",
+    "sass-autoprefixer": "^1.0.1"
+  },
+  "browserslist": [
+    "last 1 versions"
+  ],
+  "keywords": [],
+  "license": "MIT"
+}
