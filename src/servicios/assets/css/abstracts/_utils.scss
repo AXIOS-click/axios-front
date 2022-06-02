@@ -1,16 +1,17 @@
 // colores
-$Azul: #111e6c;
-$Rojo: #ef434e;
-$magenta: #81395A;
-$Gris-oscuro: #323232;
-$Gris-claro: #969696;
-$Color-background: #e5e7ef;
-$remplzazo-negro: #0d0d0d;
+$Color-background: #0d0d0d;
+$Color-background-d: #FFFFFF;
+$morado: #b16cea;
 // animaciones 
-$transition: all 400ms ease;
+$transition: all 300ms ease;
 
 // tamaños
 
 $container-width-lg: 75%;
 $container-width-md: 86%;
 $container-width-sm: 90%;
+
+//funciones
+@function linear($angulo) {
+  @return linear-gradient($angulo, #b16cea 20%, #ff5e69 60%, #ff8a56 80%, #ffa84b)
+}

@@ -26,10 +26,7 @@ menu__StyledHamburgerButton_sdn9y6.addEventListener('click', function () {
     men.classList.remove('slide-in-right')
     men.classList.add('slide-out-right')
 
-    setTimeout(() => {
-
-      men.classList.remove('slide-out-right')
-      men.classList.remove('active')
-    }, 900)
+    men.classList.remove('slide-out-right')
+    men.classList.remove('active')
   }
 });
