@@ -1,7 +1,6 @@
 const section_diez__panel__preguntas__item__titulo = document.querySelectorAll('.section_diez__panel__preguntas__item__titulo');
 const section_diez__panel__preguntas__item = document.querySelectorAll('.section_diez__panel__preguntas__item');
 const men = document.querySelector('.men')
-console.log(section_diez__panel__preguntas__item)
 for (let i = 0; i < section_diez__panel__preguntas__item__titulo.length; i++) {
   section_diez__panel__preguntas__item__titulo[i].addEventListener('click', function () {
     section_diez__panel__preguntas__item[i].classList.toggle('active');
