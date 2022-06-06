@@ -1,9 +1,0 @@
-@use 'abstracts/mixins';
-@use 'abstracts/utils';
-
-body {
-  background: red;
-  display: grid;
-  transition: all .5s;
-  user-select: none;
-}
