@@ -943,7 +943,7 @@ img {
     }
 
     &_c {
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
@@ -977,6 +977,10 @@ img {
         }
       }
 
+    }
+
+    .active {
+      display: flex !important;
     }
 
     &__table {
