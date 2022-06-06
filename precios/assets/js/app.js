@@ -35,21 +35,23 @@ for (let i = 0; i < bt_aa.length; i++) {
   bt_aa[i].addEventListener('click', function () {
     if (i == 0) {
       if (bt_aa[i].classList[2] === 'active') {
-        bt_aa[0].classList.remove('active');
-        bt_aa[1].classList.add('active');
       } else {
+        // activando mensual
         bt_aa[0].classList.add('active');
         bt_aa[1].classList.remove('active');
+        document.querySelector('.section_tres__pannel_c.mensual').classList.add('active');
+        document.querySelector('.section_tres__pannel_c.anual').classList.remove('active');
+        console.log('a')
       }
     } else if (i == 1) {
       if (bt_aa[i].classList[2] === 'active') {
-        bt_aa[0].classList.add('active');
-        bt_aa[1].classList.remove('active');
 
       } else {
 
         bt_aa[0].classList.remove('active');
         bt_aa[1].classList.add('active');
+        document.querySelector('.section_tres__pannel_c.mensual').classList.remove('active');
+        document.querySelector('.section_tres__pannel_c.anual').classList.add('active');
       }
     }
 

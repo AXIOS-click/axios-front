@@ -1,0 +1,4 @@
+Sitemap: https://axios.click/sitemap.xml
+
+User-agent: *
+Disallow: /cgi-bin/
